@@ -23,6 +23,7 @@
     "lodash": "^4.17.21",
     "modern-normalize": "^1.1.0",
     "notyf": "^3.10.0",
+    "sass": "^1.71.1",
     "tui-pagination": "^3.4.1"
   },
   "devDependencies": {
