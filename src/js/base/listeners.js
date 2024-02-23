@@ -16,7 +16,7 @@ refs.myLibPageLink.addEventListener('click', myLibLinkClick);
 refs.headerLogoLink.addEventListener('click', homeLinkClick);
 refs.gallery.addEventListener('click', onGalleryClick);
 refs.closeModalBtn.addEventListener('click', onCloseModalWindow);
-refs.footerModalLink.addEventListener('click', onOpenTeamModal);
+// refs.footerModalLink.addEventListener('click', onOpenTeamModal);
 function addFormListenerHome() {
   refs.searchForm[0].addEventListener('submit', onFormSubmit);
   refs.genresDropdownBtn[0].addEventListener('click', onDropBtnClick);
