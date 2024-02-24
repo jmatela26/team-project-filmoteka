@@ -43,6 +43,7 @@ const changeThemeToDark = () => {
       .querySelectorAll('.modal__param-titel')
       .forEach(el => el.setAttribute('data-theme', 'dark'));
   }
+  document.querySelectorAll('.header').forEach(el => el.setAttribute('data-theme', 'dark'));
   document.querySelectorAll('.wrapper').forEach(el => el.setAttribute('data-theme', 'dark'));
   document.querySelectorAll('.gallery__title').forEach(el => el.setAttribute('data-theme', 'dark'));
   localStorage.setItem('data-theme', 'dark'); // save theme to local storage
@@ -62,6 +63,8 @@ const changeThemeToLight = () => {
   document
     .querySelectorAll('.gallery__title')
     .forEach(el => el.setAttribute('data-theme', 'light'));
+
+  document.querySelectorAll('.header').forEach(el => el.setAttribute('data-theme', 'light'));
 };
 
 export { setDefaultTheme };

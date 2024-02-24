@@ -41,6 +41,11 @@ function renderGenres(data) {
     })
     .join('');
   refs.genresDropdown.innerHTML = `<ul class="genres_list" name="genres_list">` + markup + `</ul>`;
+
+  const header = document.querySelector('.header');
+
+  // Change border to 0 using JavaScript
+  header.style.border = '0';
 }
 
 function onGenresClick(e) {

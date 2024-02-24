@@ -3,17 +3,8 @@
   text-align: center;
   background: $primary-text-color;
   cursor: pointer;
+  border-bottom: 1px solid $accent-color;
 }
-// .genres_list {
-//   padding: 20px;
-//   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-//   grid-gap: 10px;
-//   display: grid;
-//   border-bottom: 3px solid $accent-color;
-//   @media screen and (min-width: 768px) {
-//     grid-gap: 15px;
-//   }
-// }
 
 .genres_list {
   padding: 20px;
@@ -53,6 +44,6 @@
 }
 
 .genres_link.active {
-  background: $accent-color;
-  color: $white-text-color;
+  background: $white-text-color;
+  color: $accent-color;
 }

@@ -1,6 +1,6 @@
 import './sass/index.scss';
 import './js/api/api-service';
-import './js/base/spiner';
+import './js/base/spinner';
 import './js/base/handlers.js';
 import './js/base/state';
 import './js/base/listeners';

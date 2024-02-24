@@ -12,6 +12,16 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  &[data-theme="dark"] 
+  {
+     border-bottom: 1px solid $accent-color;
+     box-shadow: 0 0 14px 13px rgba(255,107,1,.425);
+     animation: waveGlow 1.5s infinite alternate;
+  }
+  &[data-theme="light"] 
+  {
+     border: 0;
+  }
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: linear-gradient($header-color, $header-color),
@@ -40,6 +50,18 @@
     }
   }
 }
+
+@keyframes waveGlow {
+  0% {
+     border-top-color: $accent-color;
+     box-shadow: 0 0 7px 7px rgba(255,107,0,.425);
+  }
+  100% {
+     border-top-color: $accent-color;
+     box-shadow: 0 0 7px 7px rgba(255,107,0,.625);
+  }
+}
+
 //add header class on click "MY LIBRARY"
 .header_libr {
   background-color: rgb(39, 1, 4);
