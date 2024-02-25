@@ -9,7 +9,7 @@ import cindy from '../../images/team/cindy.png';
 const teamModalMarkup = `
 
 <div class="footer-modal__window">
-    <a href=""  target="_blank" class="social-list__item" >
+    <a href="https://github.com/jmatela26/team-project-filmoteka"  target="_blank" class="social-list__item" >
         <img src="${image}" alt="team logo" class="team__logo">
         <h3 class="team-logo__name">Our team </h3>
     </a>
