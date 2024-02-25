@@ -18,6 +18,11 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="../node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+    <!-- Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="../node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
   </head>
 
   <body data-modal-scroll-lock>
@@ -28,6 +33,7 @@
 
       <main>
         <include src="./partials/genres.html"></include>
+        <include src="./partials/glide.html"></include>
         <include src="./partials/gallery.html"></include>
       </main>
 
@@ -38,6 +44,7 @@
       <include src="./partials/modal.html"></include>
       <include src="./partials/scrollToTop.html"></include>
     </div>
+    <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
