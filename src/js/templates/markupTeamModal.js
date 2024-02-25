@@ -15,7 +15,7 @@ const teamModalMarkup = `
     </a>
     <ul class="team">
         <li class="team__list">
-            <a href="" target="_blank" class="social-list__item">
+            <a href="https://github.com/jmatela26" target="_blank" class="social-list__item">
                 <img src="${josh}" alt="Josiah Matela" class="team__img">
                 <div class="team__box">
                     <h3 class="team__name">Josiah Matela </h3>
@@ -24,7 +24,7 @@ const teamModalMarkup = `
             </a>
         </li>
         <li class="team__list">
-            <a href="" target="_blank" class="social-list__item">
+            <a href="https://github.com/lesjohnpaul" target="_blank" class="social-list__item">
                 <img src="${lesjohnpaul}" alt="Les John Paul" class="team__img ">
                 <div class="team__box">
                     <h3 class="team__name">Les John Paul</h3>
@@ -33,7 +33,7 @@ const teamModalMarkup = `
             </a>
         </li>
         <li class="team__list">
-            <a href="" target="_blank" class="social-list__item">
+            <a href="https://github.com/techista1584" target="_blank" class="social-list__item">
                 <img src="${rubymateo}" alt="Ruby Mateo" width=100 height=100 class="team__img">
                 <div class="team__box">
                     <h3 class="team__name">Ruby Mateo</h3>
@@ -42,7 +42,7 @@ const teamModalMarkup = `
             </a>
         </li>
         <li class="team__list">
-            <a href="" target="_blank" class="social-list__item">
+            <a href="https://github.com/Michelle0805" target="_blank" class="social-list__item">
                 <img src="${michelle}" alt="" class="team__img">
                 <div class="team__box">
                     <h3 class="team__name">Michelle Jean Sudaria</h3>
@@ -51,7 +51,7 @@ const teamModalMarkup = `
             </a>
         </li>
         <li class="team__list">
-            <a href="h" target="_blank" class="social-list__item">
+            <a href="https://github.com/hunterbugs" target="_blank" class="social-list__item">
                 <img src="${rene}" alt="" class="team__img">
                 <div class="team__box">
                     <h3 class="team__name">Rene Fernandez</h3>
@@ -60,7 +60,7 @@ const teamModalMarkup = `
             </a>
         </li>
         <li class="team__list">
-            <a href="h" target="_blank" class="social-list__item">
+            <a href="https://github.com/CindyRuth19" target="_blank" class="social-list__item">
                 <img src="${cindy}" alt="" class="team__img">
                 <div class="team__box">
                     <h3 class="team__name">Cindy Ruth Orllena</h3>
