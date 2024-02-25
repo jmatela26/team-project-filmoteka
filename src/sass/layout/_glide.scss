@@ -30,3 +30,8 @@
         text-shadow: 0 0 10px rgba(255, 0, 0, 0.3), 0 0 20px rgba(255, 0, 0, 0.3), 0 0 30px rgba(255, 0, 0, 0.3), 0 0 40px rgba(255, 0, 0, 0.3), 0 0 70px rgba(255, 0, 0, 0.3), 0 0 80px rgba(255, 0, 0, 0.3), 0 0 100px rgba(255, 0, 0, 0.3), 0 0 150px rgba(255, 0, 0, 0.3);
     }
 }
+
+.trending__image:hover {
+    cursor: pointer;
+    filter: brightness(70%);
+}
