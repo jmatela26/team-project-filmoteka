@@ -69,20 +69,6 @@
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team__list:not(:first-of-type):hover::before,
-.team__list:not(:first-of-type):focus::before {
-  content: '';
-  background-image: url('/src/images/team/github.png');
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  background-size: cover;
-  left: 0px;
-  opacity: 0.7;
-  transform: scale(1); /* Initial scale */
-  transition: transform 0.3s ease; /* Add transition effect for smooth scaling */
-}
-
 .team__list:not(:first-of-type):hover::before {
   transform: scale(1.08); /* Scale when hovered */
 }
@@ -93,12 +79,17 @@
 
 .social-list__item {
   outline: none;
+  margin-bottom: 50px;
   &:focus .team__name {
     transform: scale(1.08);
   }
   &:focus .team__work {
     transform: scale(1.08);
   }
+}
+
+.social-list__item {
+  margin-bottom: 50px;
 }
 
 .team__box {
@@ -141,10 +132,13 @@
 }
 
 .team__img {
-  display: block;
-  max-width: 100%;
-  height: auto;
   -webkit-border-radius: 50em;
   -moz-border-radius: 50em;
+  max-width: 100%;
+  height: 100px;
   border-radius: 50em;
+  display: block;
+  position: relative;
+  top: 8%;
+  left: 29%;
 }
