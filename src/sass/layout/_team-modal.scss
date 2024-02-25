@@ -131,6 +131,15 @@
   }
 }
 
+.team__logo {
+  height: 300px;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .team__img {
   -webkit-border-radius: 50em;
   -moz-border-radius: 50em;
@@ -141,4 +150,38 @@
   position: relative;
   top: 8%;
   left: 29%;
+}
+
+
+.footer-modal__window[data-theme="light"] {
+  background-color: $white-text-color;
+}
+
+.footer-modal__window[data-theme="dark"] {
+  background-color: $primary-text-color;
+  border: 1px solid $accent-color;
+  box-shadow: 0 0 14px 13px rgba(255,107,1,.425);
+  /* Apply the glow animation */
+  animation: glow 2s infinite ease-in-out;
+
+  .team__name {
+    color: $accent-color
+  }
+
+  .team__work, .team-logo__name{
+    color: $white-text-color;
+  }
+}
+
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+  }
 }

@@ -37,6 +37,7 @@ const changeThemeToDark = () => {
     .forEach(el => el.setAttribute('data-theme', 'dark'));
   document.querySelector('.footer-box__text--after').setAttribute('data-theme', 'dark');
   document.querySelector('.footer__link').setAttribute('data-theme', 'dark');
+ 
   if (document.querySelector('.modal_film_card')) {
     document.querySelector('.modal_film_card').setAttribute('data-theme', 'dark');
     document
@@ -46,6 +47,7 @@ const changeThemeToDark = () => {
   document.querySelectorAll('.header').forEach(el => el.setAttribute('data-theme', 'dark'));
   document.querySelectorAll('.wrapper').forEach(el => el.setAttribute('data-theme', 'dark'));
   document.querySelectorAll('.gallery__title').forEach(el => el.setAttribute('data-theme', 'dark'));
+  document.querySelectorAll('footer-modal__window').forEach(el => el.setAttribute('data-theme', 'dark'));
   localStorage.setItem('data-theme', 'dark'); // save theme to local storage
 };
 
@@ -58,6 +60,7 @@ const changeThemeToLight = () => {
 
   document.querySelector('.footer-box__text--after').setAttribute('data-theme', 'light');
   document.querySelector('.footer__link').setAttribute('data-theme', 'light');
+  
   localStorage.setItem('data-theme', 'light'); // save theme to local storage
   document.querySelectorAll('.wrapper').forEach(el => el.setAttribute('data-theme', 'light'));
   document
@@ -65,6 +68,7 @@ const changeThemeToLight = () => {
     .forEach(el => el.setAttribute('data-theme', 'light'));
 
   document.querySelectorAll('.header').forEach(el => el.setAttribute('data-theme', 'light'));
+  document.querySelectorAll('footer-modal__window').forEach(el => el.setAttribute('data-theme', 'light'));
 };
 
 export { setDefaultTheme };

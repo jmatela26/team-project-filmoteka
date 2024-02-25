@@ -9,8 +9,8 @@ import cindy from '../../images/team/cindy.png';
 const teamModalMarkup = `
 
 <div class="footer-modal__window">
-    <a href=""  target="_blank" class="social-list__item">
-        <img src="${image}" alt="team logo">
+    <a href=""  target="_blank" class="social-list__item" >
+        <img src="${image}" alt="team logo" class="team__logo">
         <h3 class="team-logo__name">Our team </h3>
     </a>
     <ul class="team">
@@ -34,7 +34,7 @@ const teamModalMarkup = `
         </li>
         <li class="team__list">
             <a href="" target="_blank" class="social-list__item">
-                <img src="${rubymateo}" alt="Ruby Mateo" class="team__img">
+                <img src="${rubymateo}" alt="Ruby Mateo" width=100 height=100 class="team__img">
                 <div class="team__box">
                     <h3 class="team__name">Ruby Mateo</h3>
                     <p class="team__work">Developer</p>
