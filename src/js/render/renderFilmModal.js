@@ -93,7 +93,6 @@ function renderFilmModal(data) {
     .querySelector('.open-trailer')
     .addEventListener('click', async () => {
       try {
-        console.log('modal clicked');
         const trailerData = await onfetchTrailers(Number(data.data.id));
         const videoKey = trailerData.results[0].key;
         const videoUrl = `https://www.youtube.com/embed/${videoKey}?autoplay=1`;

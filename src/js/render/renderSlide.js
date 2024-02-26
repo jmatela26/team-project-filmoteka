@@ -1,6 +1,9 @@
-import { onfetchTrailers, getPopularFilms } from '../api/api-service';
+import { getPopularFilms, getFilmById } from '../api/api-service';
+import { renderFilmModal, addModalBtnListeners } from './renderFilmModal'
 import images from '../../images/plug/notfound.jpg';
 import Glide from '@glidejs/glide';
+import { openModal } from '../base/handlers';
+import { setDefaultTheme } from '../base/themePreference'
 
 const config = {
     type: 'carousel', // Specify the type of GlideJS carousel
@@ -20,22 +23,34 @@ export async function populateCarousel(page) {
       const glide = document.querySelector('.glide__slides');
   
       popularFilms.data.results.forEach(async (film) => {
-        // const trailers = await onfetchTrailers(film.id);
         const createListItem = document.createElement('li');
-        // const trailerKey = trailers.length > 0 ? trailers[0].key : ''; // Assuming you want to use the first trailer key if available
         const posterPath = !film.poster_path ? images : `https://image.tmdb.org/t/p/w500${film.poster_path}`;
-        // <iframe width="560" height="315" src="https://www.youtube.com/embed/${trailerKey}" frameborder="0" allowfullscreen></iframe>
         createListItem.innerHTML = `
-              <img class="trending__image" src="${posterPath}" alt="${film.title}" />
+              <img class="trending__image" src="${posterPath}" alt="${film.title}" data-id="${film.id}" />
         `;
         glide.appendChild(createListItem);
       });
 
-
-
     // Initialize 
     let glid = new Glide('.images', config);
     glid.mount();
+
+
+    // Add event listener to each image
+    const trendingImages = document.querySelectorAll('.trending__image');
+    trendingImages.forEach(image => {
+        image.addEventListener('click', () => {
+            // Get the film ID from the data-id attribute
+            const filmId = image.getAttribute('data-id');
+            
+            getFilmById(filmId)
+            .then(renderFilmModal)
+            .then(addModalBtnListeners)
+            .then(setDefaultTheme);
+
+            openModal();
+        });
+    });
 
     } catch (error) {
       console.error('Error populating carousel: ', error.message);
