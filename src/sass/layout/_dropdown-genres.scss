@@ -3,7 +3,15 @@
   text-align: center;
   background: $primary-text-color;
   cursor: pointer;
-  border-bottom: 1px solid $accent-color;
+
+  transition: opacity 1s ease, transform 1s ease; //add animation
+  transform: translateY(-20px);
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+    border-bottom: 1px solid $accent-color;
+  }
 }
 
 .genres_list {
@@ -14,17 +22,24 @@
   gap: 20px;
   display: flex;
   flex-wrap: wrap;
+  display: none; // Start with the list hidden
+
+  &.show {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 960px) {
   .genres_list {
-    width: 100%; /* Set width to 100% for screens less than or equal to 768px */
+    width: 100%;
+    /* Set width to 100% for screens less than or equal to 768px */
   }
 }
 
 @media screen and (min-width: 959px) {
   .genres_list {
-    width: 960px; /* Set width to 960px for screens greater than or equal to 769px */
+    width: 960px;
+    /* Set width to 960px for screens greater than or equal to 769px */
   }
 }
 
