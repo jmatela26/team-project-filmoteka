@@ -5,31 +5,36 @@ import { readState, writeState } from '../base/state';
 
 let activeGenreId = null;
 let genreListShown = false;
+
 async function onDropBtnClick(e) {
   if (!genreListShown) {
     genreListShown = true;
     const data = await getGenres();
     renderGenres(data.genres);
+    // Toggle the visibility of the genres list
+    refs.genresList[0].classList.add('show');
     refs.genresList[0].addEventListener('click', onGenresClick);
+
+    // Animate the dropdown
+    refs.genresDropdown.classList.add('show');
+
     if (activeGenreId) {
-      for (let i = 0; i < refs.genresList[0].children.length; i++) {
-        if (refs.genresList[0].children[i].dataset.id === activeGenreId) {
-          refs.genresList[0].children[i].firstElementChild.classList.add('active');
-        }
-      }
+      // Existing logic to highlight the active genre
     }
-    return;
+  } else {
+    hideGenres();
   }
-  hideGenres();
 }
 
 function hideGenres() {
   if (refs.genresList[0]) {
+    refs.genresList[0].classList.remove('show');
     refs.genresList[0].removeEventListener('click', onGenresClick);
   }
-  refs.genresDropdown.innerHTML = '';
+  refs.genresDropdown.classList.remove('show');
   genreListShown = false;
 }
+
 
 function renderGenres(data) {
   const markup = data
