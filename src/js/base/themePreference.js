@@ -48,6 +48,7 @@ const changeThemeToDark = () => {
   document.querySelectorAll('.wrapper').forEach(el => el.setAttribute('data-theme', 'dark'));
   document.querySelectorAll('.gallery__title').forEach(el => el.setAttribute('data-theme', 'dark'));
   document.querySelectorAll('footer-modal__window').forEach(el => el.setAttribute('data-theme', 'dark'));
+  document.querySelectorAll('.trending--movies__title').forEach(el => el.setAttribute('data-theme', 'dark'));
   localStorage.setItem('data-theme', 'dark'); // save theme to local storage
 };
 
@@ -69,6 +70,7 @@ const changeThemeToLight = () => {
 
   document.querySelectorAll('.header').forEach(el => el.setAttribute('data-theme', 'light'));
   document.querySelectorAll('footer-modal__window').forEach(el => el.setAttribute('data-theme', 'light'));
+  document.querySelectorAll('.trending--movies__title').forEach(el => el.setAttribute('data-theme', 'light'));
 };
 
 export { setDefaultTheme };
