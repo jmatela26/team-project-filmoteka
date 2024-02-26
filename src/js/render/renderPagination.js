@@ -10,11 +10,13 @@ function renderPagination(pageAmount, currentPage = 1) {
     document.querySelector('#pagination').innerHTML = '';
     return;
   }
+
   document.querySelector('#pagination').innerHTML = `
-  <div class="pagination">
-    <div id="tui-pagination-container" class="tui-pagination"></div>
-  </div>
-`;
+    <div class="pagination">
+      <div id="tui-pagination-container" class="tui-pagination"></div>
+    </div>
+  `;
+
   pagination = new Pagination('tui-pagination-container', {
     totalItems: pageAmount,
     itemsPerPage: 1,
@@ -41,7 +43,14 @@ function renderPagination(pageAmount, currentPage = 1) {
     },
   });
 
-  pagination.on('afterMove', ({ page }) => onPaginatorClick(page));
+  pagination.on('afterMove', ({ page }) => {
+    onPaginatorClick(page);
+    // Smoothly scroll to the gallery container after the page content has been updated
+    document.getElementById('gallery_container').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+
   if (pageAmount === 1) {
     document.querySelector('#tui-pagination-container').style.display = 'none';
   }
