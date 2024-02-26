@@ -53,8 +53,34 @@ function renderGenres(data) {
   header.style.border = '0';
 }
 
+// function onGenresClick(e) {
+//   e.preventDefault();
+//   const state = readState();
+//   state.currentPage = 1;
+//   writeState(state);
+
+//   if (e.target.classList.contains('active')) {
+//     activeGenreId = null;
+//     e.target.classList.remove('active');
+//     updateInterface();
+//     return;
+//   }
+//   for (let i = 0; i < refs.genresList[0].children.length; i++) {
+//     if (refs.genresList[0].children[i] !== e.target.parentNode) {
+//       refs.genresList[0].children[i].firstElementChild.classList.remove('active');
+
+//       activeGenreId = null;
+//     }
+//   }
+//   e.target.classList.add('active');
+//   const genreId = e.target.parentNode.dataset.id;
+//   activeGenreId = genreId;
+//   updateInterface();
+// }
+
 function onGenresClick(e) {
-  e.preventDefault();
+  e.preventDefault(); // Prevent the default link behavior
+
   const state = readState();
   state.currentPage = 1;
   writeState(state);
@@ -63,19 +89,24 @@ function onGenresClick(e) {
     activeGenreId = null;
     e.target.classList.remove('active');
     updateInterface();
+    // No need to scroll if deselecting an active genre, so return early
     return;
   }
+
+  // Deactivate previously active genre and activate the clicked one
   for (let i = 0; i < refs.genresList[0].children.length; i++) {
     if (refs.genresList[0].children[i] !== e.target.parentNode) {
       refs.genresList[0].children[i].firstElementChild.classList.remove('active');
-
-      activeGenreId = null;
     }
   }
-  e.target.classList.add('active');
-  const genreId = e.target.parentNode.dataset.id;
-  activeGenreId = genreId;
-  updateInterface();
-}
 
+  e.target.classList.add('active');
+  activeGenreId = e.target.parentNode.dataset.id; // Update activeGenreId with the clicked genre's ID
+  updateInterface();
+
+  // After updating the interface, scroll to the gallery section
+  document.getElementById('gallery_container').scrollIntoView({
+    behavior: 'smooth'
+  });
+}
 export { activeGenreId, onDropBtnClick, hideGenres };

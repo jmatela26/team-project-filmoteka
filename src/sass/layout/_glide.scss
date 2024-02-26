@@ -1,37 +1,36 @@
 .trending--movies__title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 60px;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3), 0 0 20px rgba(255, 0, 0, 0.3), 0 0 30px rgba(255, 0, 0, 0.3), 0 0 40px rgba(255, 0, 0, 0.3), 0 0 70px rgba(255, 0, 0, 0.3), 0 0 80px rgba(255, 0, 0, 0.3), 0 0 100px rgba(255, 0, 0, 0.3), 0 0 150px rgba(255, 0, 0, 0.3);
-    animation: flicker-animation 1s infinite;
-    margin: 50px 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 45px;
+  color: #d6d6d6;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 106, 0, 0.3), 0 0 20px rgba(255, 106, 0, 0.3), 0 0 30px rgba(255, 106, 0, 0.3), 0 0 40px rgba(255, 106, 0, 0.3), 0 0 70px rgba(255, 106, 0, 0.3), 0 0 80px rgba(255, 106, 0, 0.3), 0 0 100px rgba(255, 106, 0, 0.3), 0 0 150px rgba(255, 106, 0, 0.3);
+  animation: flicker-animation 1s infinite;
+  margin: 50px 50px;
 
-    &[data-theme="light"] 
-    {
-        color: #000;
-        animation: none;
-        text-shadow: none;
-    }
+  &[data-theme="light"] {
+    color: #000;
+    animation: none;
+    text-shadow: none;
+  }
 }
 
 /* Flickering animation */
 @keyframes flicker-animation {
-    0% {
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.3), 0 0 20px rgba(255, 0, 0, 0.3), 0 0 30px rgba(255, 0, 0, 0.3), 0 0 40px rgba(255, 0, 0, 0.3), 0 0 70px rgba(255, 0, 0, 0.3), 0 0 80px rgba(255, 0, 0, 0.3), 0 0 100px rgba(255, 0, 0, 0.3), 0 0 150px rgba(255, 0, 0, 0.3);
-    }
+  0% {
+    text-shadow: 0 0 10px rgba(255, 106, 0, 0.3), 0 0 20px rgba(255, 106, 0, 0.3), 0 0 30px rgba(255, 106, 0, 0.3), 0 0 40px rgba(255, 106, 0, 0.3), 0 0 70px rgba(255, 106, 0, 0.3), 0 0 80px rgba(255, 106, 0, 0.3), 0 0 100px rgba(255, 106, 0, 0.3), 0 0 150px rgba(255, 106, 0, 0.3);
+  }
 
-    50% {
-        text-shadow: none;
-    }
+  50% {
+    text-shadow: none;
+  }
 
-    100% {
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.3), 0 0 20px rgba(255, 0, 0, 0.3), 0 0 30px rgba(255, 0, 0, 0.3), 0 0 40px rgba(255, 0, 0, 0.3), 0 0 70px rgba(255, 0, 0, 0.3), 0 0 80px rgba(255, 0, 0, 0.3), 0 0 100px rgba(255, 0, 0, 0.3), 0 0 150px rgba(255, 0, 0, 0.3);
-    }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 106, 0, 0.3), 0 0 20px rgba(255, 106, 0, 0.3), 0 0 30px rgba(255, 106, 0, 0.3), 0 0 40px rgba(255, 106, 0, 0.3), 0 0 70px rgba(255, 106, 0, 0.3), 0 0 80px rgba(255, 106, 0, 0.3), 0 0 100px rgba(255, 106, 0, 0.3), 0 0 150px rgba(255, 106, 0, 0.3);
+  }
 }
 
 .trending__image:hover {
-    cursor: pointer;
-    filter: brightness(70%);
+  cursor: pointer;
+  filter: brightness(70%);
 }

@@ -10,10 +10,12 @@
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     width: 562px;
     padding: 42px 30px 41px 20px;
   }
+
   @media screen and (min-width: 1024px) {
     width: 814px;
     padding: 40px 16px 40px 16px;
@@ -41,21 +43,26 @@
   margin-right: 15px;
   border-radius: 5%;
   transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
   @media screen and (min-width: 768px) {
     flex-basis: calc(100% / 2 - 40px);
   }
+
   @media screen and (min-width: 1024px) {
     flex-basis: calc(100% / 3 - 40px);
   }
+
   &:not(:last-child) {
     @media screen and (max-width: 768px) {
       margin-bottom: 30px;
       margin-right: 0;
     }
   }
+
   &:hover {
     transform: scale(1.08);
   }
+
   &:nth-child(2n) {
     @media screen and (max-width: 1024px) {
       margin-right: 0;
@@ -70,7 +77,8 @@
 }
 
 .team__list:not(:first-of-type):hover::before {
-  transform: scale(1.08); /* Scale when hovered */
+  transform: scale(1.08);
+  /* Scale when hovered */
 }
 
 .social-list__link {
@@ -80,9 +88,11 @@
 .social-list__item {
   outline: none;
   margin-bottom: 50px;
+
   &:focus .team__name {
     transform: scale(1.08);
   }
+
   &:focus .team__work {
     transform: scale(1.08);
   }
@@ -104,6 +114,7 @@
   font-size: 50px;
   display: flex;
   justify-content: center;
+
   @media screen and (max-width: 768px) {
     font-weight: 500;
     font-size: 40px;
@@ -125,6 +136,7 @@
   color: $footer-text-color;
   font-weight: 500;
   font-size: 20px;
+
   @media screen and (max-width: 1024px) {
     line-height: 1.25;
     font-weight: 300;
@@ -132,7 +144,7 @@
 }
 
 .team__logo {
-  height: 300px;
+  height: 170px;
 
   @media screen and (max-width: 767px) {
     width: 100%;
@@ -160,7 +172,7 @@
 .footer-modal__window[data-theme="dark"] {
   background-color: $primary-text-color;
   border: 1px solid $accent-color;
-  box-shadow: 0 0 14px 13px rgba(255,107,1,.425);
+  box-shadow: 0 0 14px 13px rgba(255, 107, 1, .425);
   /* Apply the glow animation */
   animation: glow 2s infinite ease-in-out;
 
@@ -168,7 +180,8 @@
     color: $accent-color
   }
 
-  .team__work, .team-logo__name{
+  .team__work,
+  .team-logo__name {
     color: $white-text-color;
   }
 }
@@ -178,9 +191,11 @@
   0% {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0);
   }
+
   50% {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   }
+
   100% {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0);
   }
