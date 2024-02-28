@@ -63,7 +63,7 @@ const teamModalMarkup = `
             <a href="https://github.com/CindyRuth19" target="_blank" class="social-list__item">
                 <img src="${cindy}" alt="" class="team__img">
                 <div class="team__box">
-                    <h3 class="team__name">Cindy Ruth Orllena</h3>
+                    <h3 class="team__name">Cindy Ruth Orillena</h3>
                     <p class="team__work">Developer</p>
                 </div>
             </a>

@@ -42,6 +42,11 @@ export async function populateCarousel(page) {
         image.addEventListener('click', () => {
             // Get the film ID from the data-id attribute
             const filmId = image.getAttribute('data-id');
+
+             // Update the modalFilmId in session storage
+            const state = JSON.parse(sessionStorage.getItem('state'));
+            state.modalFilmId = filmId;
+            sessionStorage.setItem('state', JSON.stringify(state));
             
             getFilmById(filmId)
             .then(renderFilmModal)
