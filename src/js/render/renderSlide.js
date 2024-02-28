@@ -43,6 +43,18 @@ export async function populateCarousel(page) {
             // Get the film ID from the data-id attribute
             const filmId = image.getAttribute('data-id');
 
+            // Set initial state
+            const initialState = {
+              pageType: "TRENDS_PAGE",
+              currentPage: 1,
+              search: "",
+              isModalOpen: true,
+              modalFilmId: filmId // Assuming filmId is already defined
+            };
+
+            // Store initial state in session storage
+            sessionStorage.setItem('state', JSON.stringify(initialState));
+
              // Update the modalFilmId in session storage
             const state = JSON.parse(sessionStorage.getItem('state'));
             state.modalFilmId = filmId;
