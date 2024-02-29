@@ -9,6 +9,7 @@ import './js/base/scrollToTop';
 import './js/base/themePreference';
 import { populateCarousel } from './js/render/renderSlide';
 import { setDefaultTheme } from './js/base/themePreference';
+import './js/utils/headerPositionFixed';
 
 updateInterface();
 setDefaultTheme();
