@@ -192,6 +192,8 @@ function onModalBackdropClick(e) {
 }
 
 function openModal() {
+  var header = document.querySelector('.header');
+  header.classList.remove('fixed');
   refs.modal.classList.remove('is-hidden');
   refs.scrollLock.classList.add('modal-open');
   refs.scrolltop.classList.remove('showBtn');
